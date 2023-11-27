@@ -356,6 +356,12 @@ footer {
     border-radius: 0 20px 20px 0;
 }
 
+.header-image {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
 @media screen and (min-width: 769px) {
     .search-container {
         display: none;
@@ -365,6 +371,10 @@ footer {
 @media screen and (max-width: 768px) {
     body {
         font-size: 14px;
+    }
+
+    .header-image {
+        width: 100%;
     }
 
     .container {
@@ -420,9 +430,20 @@ footer {
     }
 }
 
+@media screen and (min-width: 501px) {
+    .modal-header .modal-search-container {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .modal-body ul li {
         flex: 1 1 100%;
+    }
+
+    .modal-header .search-input {
+        width: 100%;
+        margin-right: 0;
     }
 
     header,
@@ -433,5 +454,33 @@ footer {
 
     .search-container {
         display: none;
+    }
+
+    .modal-header .modal-search-container {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .modal-header .search-input {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    .modal-header .search-button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+    }
+
+    .modal-header .search-button i {
+        margin-right: 5px;
+    }
+
+    .modal-header .search-button:hover {
+        background-color: #297fb8;
     }
 }
