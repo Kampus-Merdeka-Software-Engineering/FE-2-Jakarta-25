@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Data</title>
+</head>
+<body>
+
+    <h1>Latest News in Indonesia</h1>
+
+    <div id="news-container"></div>
+
+    <script>
+        fetch('https://newsdata.io/api/1/news?country=id&apikey=pub_335767a0176944d927e96151a9c852003ebe0', {
+            'method' : 'GET'
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            // Check if the response status is success
+            if (data.status === "success") {
+                // Access the array of results
+                const results = data.results;
+
+                // Get the news container element
+                const newsContainer = document.getElementById('news-container');
+
+                // Iterate over the results and create HTML elements
+                results.forEach((result) => {
+                    // Create a div element for each news item
+                    const newsItem = document.createElement('div');
+
+                    // Create HTML content for the news item
+                    newsItem.innerHTML = `
+                        <h2>${result.title}</h2>
+                        <p>${result.link}</p>
+                        <!-- Add more elements as needed -->
+                    `;
+
+                    // Append the news item to the news container
+                    newsContainer.appendChild(newsItem);
+                });
+            } else {
+                console.log("API request failed");
+            }
+        })
+        .catch((err) => console.log(err))
+    </script>
+
+</body>
+</html>
