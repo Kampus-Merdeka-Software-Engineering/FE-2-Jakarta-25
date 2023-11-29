@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     min-height: 100vh;
@@ -362,6 +362,99 @@ footer {
     display: block;
 }
 
+
+
+
+
+/* ... Auth ... */
+
+.auth-form {
+    margin-top: 20px;
+    height: 520px;
+    width: 400px;
+    background-color: #3498db;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+.auth-form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.auth-form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+}
+
+.auth-form label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.auth-form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.auth-form ::placeholder {
+    color: #e5e5e5;
+}
+
+.auth-form button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.auth-form .register-link {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.auth-form .register-link a {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
+/* ... Responsif ... */
 @media screen and (min-width: 769px) {
     .search-container {
         display: none;
