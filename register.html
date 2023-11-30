@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -12,7 +12,10 @@
     <div class="login-container">
         <form>
             <h3>Selamat Datang</h3>
-            <p>Masukkan informasi akun Anda untuk melanjutkan.</p>
+            <p>Isi informasi akun Anda dan nikmati layanan kami.</p>
+
+            <label for="nama">Nama</label>
+            <input type="text" placeholder="Nama" id="nama">
 
             <label for="email">Email</label>
             <input type="text" placeholder="Email" id="email">
@@ -20,10 +23,9 @@
             <label for="password">Password</label>
             <input type="password" placeholder="Password" id="password">
 
-            <button>Sign In</button>
+            <button>Sign Up</button>
 
-            <p class="outer">Belum punya akun? <a href="register.html">Sign Up</a></p>
-
+            <p class="outer">Sudah terdaftar? <a href="login.html">Sign In</a></p>
         </form>
     </div>
 </body>
