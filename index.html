@@ -1,151 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capstone</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="index">
+  <body class="index">
     <header>
-        <div class="header-hamburger">
-            <button class="hamburger"></button>
+      <div class="header-hamburger">
+        <button class="hamburger"></button>
+      </div>
+      <div class="header-brand">
+        <img src="assets\logo.png" alt="Logo" class="header-image" />
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cari Berita..."
+          />
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
         </div>
-        <div class="header-brand">
-            <img src="assets\logo.png" alt="Logo" class="header-image">
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Cari Berita...">
-                <div class="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
+      </div>
+      <div class="header-icon">
+        <div class="search">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cari Berita..."
+          />
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
         </div>
-        <div class="header-icon">
-            <div class="search">
-                <input type="text" class="search-input" placeholder="Cari Berita...">
-                <div class="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="profile" id="profileBtn"></button>
-                <div class="dropdown-content" id="profileDropdown">
-                    <a href="register.html">
-                        <i class="fas fa-user-plus"></i> Daftar
-                    </a>
-                    <hr>
-                    <a href="login.html">
-                        <i class="fas fa-sign-in-alt"></i> Masuk
-                    </a>
-                </div>
-            </div>
+        <div class="dropdown">
+          <button class="profile" id="profileBtn"></button>
+          <div class="dropdown-content" id="profileDropdown">
+            <a href="register.html">
+              <i class="fas fa-user-plus"></i> Daftar
+            </a>
+            <hr />
+            <a href="login.html"> <i class="fas fa-sign-in-alt"></i> Masuk </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Berita</h2>
-                <div class="modal-search-container">
-                    <input type="text" class="search-input" placeholder="Cari Berita...">
-                    <button class="search-button">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="modal-body nav">
-                <ul>
-                    <li><a href="#">Ekonomi</a></li>
-                    <li><a href="#">Teknologi</a></li>
-                    <li><a href="#">Otomotif</a></li>
-                    <li><a href="#">Olahraga</a></li>
-                    <li><a href="#">Politik</a></li>
-                    <li><a href="#">Gaya Hidup</a></li>
-                    <li><a href="#">Edukasi</a></li>
-                    <li><a href="#">Hiburan</a></li>
-                </ul>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Berita</h2>
+          <div class="modal-search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Cari Berita..."
+            />
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
+        <div class="modal-body nav">
+          <ul>
+            <li><a href="#">Ekonomi</a></li>
+            <li><a href="#">Teknologi</a></li>
+            <li><a href="#">Otomotif</a></li>
+            <li><a href="#">Olahraga</a></li>
+            <li><a href="#">Politik</a></li>
+            <li><a href="#">Gaya Hidup</a></li>
+            <li><a href="#">Edukasi</a></li>
+            <li><a href="#">Hiburan</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <nav>
-        <a href="#">Teknologi</a>
-        <a href="#">Ekonomi</a>
-        <a href="#">Otomotif</a>
-        <a href="#">Olahraga</a>
-        <a href="#">Politik</a>
-        <a href="#">Gaya Hidup</a>
-        <a href="#">Edukasi</a>
-        <a href="#">Hiburan</a>
+      <a href="#">Teknologi</a>
+      <a href="#">Ekonomi</a>
+      <a href="#">Otomotif</a>
+      <a href="#">Olahraga</a>
+      <a href="#">Politik</a>
+      <a href="#">Gaya Hidup</a>
+      <a href="#">Edukasi</a>
+      <a href="#">Hiburan</a>
     </nav>
 
     <div class="container">
-        <main>
-            <article>
-                <h2>Article 1</h2>
-                <p>Content of article 1.</p>
-            </article>
-            <article>
-                <h2>Article 1</h2>
-                <p>Content of article 1.</p>
-            </article>
-            <article>
-                <h2>Article 1</h2>
-                <p>Content of article 1.</p>
-            </article>
-        </main>
+      <main>
+        <section id="terbaru">
+          <h2>Terbaru</h2>
+          <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+              <img src="https://source.unsplash.com/featured/?technology" alt="Card 1">
+              <div class="card-body">
+                <h3>Card Title 1</h3>
+                <p>Content of Card 1.</p>
+              </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="card">
+              <img src="https://source.unsplash.com/featured/?business" alt="Card 2">
+              <div class="card-body">
+                <h3>Card Title 2</h3>
+                <p>Content of Card 2.</p>
+              </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="card">
+              <img src="https://source.unsplash.com/featured/?sports" alt="Card 3">
+              <div class="card-body">
+                <h3>Card Title 3</h3>
+                <p>Content of Card 3.</p>
+              </div>
+            </div>
 
-        <aside>
-            <h2>Aside</h2>
-            <p>Content of aside.</p>
-            <h2>Aside</h2>
-            <p>Content of aside.</p>
-        </aside>
+            <!-- Card 1 -->
+            <div class="card">
+              <img src="https://source.unsplash.com/featured/?technology" alt="Card 1">
+              <div class="card-body">
+                <h3>Card Title 1</h3>
+                <p>Content of Card 1.</p>
+              </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="card">
+              <img src="https://source.unsplash.com/featured/?business" alt="Card 2">
+              <div class="card-body">
+                <h3>Card Title 2</h3>
+                <p>Content of Card 2.</p>
+              </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="card">
+              <img src="https://source.unsplash.com/featured/?sports" alt="Card 3">
+              <div class="card-body">
+                <h3>Card Title 3</h3>
+                <p>Content of Card 3.</p>
+              </div>
+            </div>
+    
+            <!-- Repeat the structure for the next 3 cards -->
+          </div>
+        </section>
+
+        <section id="teknologi">
+          <h2>Teknologi</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?technology" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Teknologi</h3>
+              <p>Content of article 1 in the Teknologi category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?technology" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Teknologi</h3>
+              <p>Content of article 1 in the Teknologi category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?technology" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Teknologi</h3>
+              <p>Content of article 1 in the Teknologi category.</p>
+            </div>
+          </article>
+
+          <!-- Tambahkan artikel lain di dalam kategori Teknologi jika diperlukan -->
+        </section>
+
+        <section id="ekonomi">
+          <h2>Ekonomi</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?business" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Ekonomi</h3>
+              <p>Content of article 1 in the Ekonomi category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?business" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Ekonomi</h3>
+              <p>Content of article 1 in the Ekonomi category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?business" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Ekonomi</h3>
+              <p>Content of article 1 in the Ekonomi category.</p>
+            </div>
+          </article>
+          
+          <!-- Tambahkan artikel lain di dalam kategori Ekonomi jika diperlukan -->
+        </section>
+
+        <section id="otomotif">
+          <h2>Otomotif</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?automotive" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Otomotif</h3>
+              <p>Content of article 1 in the Otomotif category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?automotive" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Otomotif</h3>
+              <p>Content of article 1 in the Otomotif category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?automotive" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Otomotif</h3>
+              <p>Content of article 1 in the Otomotif category.</p>
+            </div>
+          </article>
+          
+          <!-- Tambahkan artikel lain di dalam kategori Ekonomi jika diperlukan -->
+        </section>
+
+        <section id="olahraga">
+          <h2>Olahraga</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?sports" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Olahraga</h3>
+              <p>Content of article 1 in the Olahraga category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?sports" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Olahraga</h3>
+              <p>Content of article 1 in the Olahraga category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?sports" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Olahraga</h3>
+              <p>Content of article 1 in the Olahraga category.</p>
+            </div>
+          </article>
+          
+          <!-- Tambahkan artikel lain di dalam kategori Ekonomi jika diperlukan -->
+        </section>
+
+        <section id="politik">
+          <h2>Politik</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?politics" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Politik</h3>
+              <p>Content of article 1 in the Politik category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?politics" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Politik</h3>
+              <p>Content of article 1 in the Politik category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?politics" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Politik</h3>
+              <p>Content of article 1 in the Politik category.</p>
+            </div>
+          </article>
+          
+          <!-- Tambahkan artikel lain di dalam kategori Ekonomi jika diperlukan -->
+        </section>
+
+        <section id="gaya-hidup">
+          <h2>Gaya Hidup</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?lifestyle" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Gaya Hidup</h3>
+              <p>Content of article 1 in the Gaya Hidup category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?lifestyle" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Gaya Hidup</h3>
+              <p>Content of article 1 in the Gaya Hidup category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?lifestyle" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Gaya Hidup</h3>
+              <p>Content of article 1 in the Gaya Hidup category.</p>
+            </div>
+          </article>
+          
+          <!-- Tambahkan artikel lain di dalam kategori Ekonomi jika diperlukan -->
+        </section>
+
+        <section id="edukasi">
+          <h2>Edukasi</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?education" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Edukasi</h3>
+              <p>Content of article 1 in the Edukasi category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?education" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Edukasi</h3>
+              <p>Content of article 1 in the Edukasi category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?education" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Edukasi</h3>
+              <p>Content of article 1 in the Edukasi category.</p>
+            </div>
+          </article>
+          
+          <!-- Tambahkan artikel lain di dalam kategori Ekonomi jika diperlukan -->
+        </section>
+
+        <section id="hiburan">
+          <h2>Hiburan</h2>
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?entertainment" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Hiburan</h3>
+              <p>Content of article 1 in the Hiburan category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?entertainment" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Hiburan</h3>
+              <p>Content of article 1 in the Hiburan category.</p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://source.unsplash.com/featured/?entertainment" alt="Article Image">
+            </div>
+            <div class="article-content">
+              <h3>Article 1 - Hiburan</h3>
+              <p>Content of article 1 in the Hiburan category.</p>
+            </div>
+          </article>
+          
+          <!-- Tambahkan artikel lain di dalam kategori Ekonomi jika diperlukan -->
+        </section>
+    
+        <!-- Tambahkan section untuk kategori-kategori berita lainnya -->
+    
+      </main>
+
+      <aside>
+        <h2>Aside</h2>
+        <p>Content of aside.</p>
+        <h2>Aside</h2>
+        <p>Content of aside.</p>
+      </aside>
     </div>
 
     <footer>
-        <p>Footer</p>
-        <p>asiap</p>
-        <p>anjay</p>
+      <p>Footer</p>
+      <p>asiap</p>
+      <p>anjay</p>
     </footer>
 
-    <script>
-        document.querySelector('.hamburger').addEventListener('click', function () {
-            document.getElementById('myModal').style.display = 'block';
-        });
-
-        document.querySelector('.close').addEventListener('click', function () {
-            document.getElementById('myModal').style.display = 'none';
-        });
-
-        window.addEventListener('click', function (event) {
-            var modal = document.getElementById('myModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        document.getElementById('profileBtn').addEventListener('click', function () {
-            var dropdown = document.getElementById('profileDropdown');
-            dropdown.classList.toggle('show');
-        });
-
-        document.addEventListener('click', function (event) {
-            var dropdown = document.getElementById('profileDropdown');
-            var profileBtn = document.getElementById('profileBtn');
-
-            if (!profileBtn.contains(event.target) && !dropdown.contains(event.target)) {
-                dropdown.classList.remove('show');
-            }
-        });
-
-    </script>
-</body>
-
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
