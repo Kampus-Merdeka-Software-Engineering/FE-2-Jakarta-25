@@ -35,6 +35,18 @@ const loadBerita = () => {
   fetch(apiRoutes.berita)
     .then((res) => res.json())
     .then((res) => {
+      res.data.forEach(({judul, foto, kategori}) => {
+        document.getElementById("berita-terbaru").innerHTML += `
+          <div class="card">
+              <img src="${foto}" alt="Card 1">
+              <div class="card-body">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </div>
+        `
+      });
+
       console.log({ res });
     });
 };
