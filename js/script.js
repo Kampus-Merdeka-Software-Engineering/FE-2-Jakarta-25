@@ -27,7 +27,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
 const apiRoutes = {
   berita: `${baseUrl}/berita`,
 };
@@ -68,7 +68,7 @@ const loadBeritaDetail = async () => {
   if (urlSearchParams.get("id") != null) {
     const id = urlSearchParams.get("id");
 
-    const rawResponse = await fetch(`http://localhost:3000/berita/${id}`);
+    const rawResponse = await fetch(`https://be-2-jakarta-25-production.up.railway.app/berita/${id}`);
     const response = await rawResponse.json();
 
     // Mendapatkan elemen dengan id "publish_date"
