@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="index">
+    <header>
+      <div class="header-hamburger">
+        <button class="hamburger"></button>
+      </div>
+      <div class="header-brand">
+        <img src="assets\logo.png" alt="Logo" class="header-image" />
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cari Berita..."
+          />
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header-icon">
+        <div class="search">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cari Berita..."
+          />
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="profile" id="profileBtn"></button>
+          <div class="dropdown-content" id="profileDropdown">
+            <a href="register.html">
+              <i class="fas fa-user-plus"></i> Daftar
+            </a>
+            <hr />
+            <a href="login.html"> <i class="fas fa-sign-in-alt"></i> Masuk </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Berita</h2>
+          <div class="modal-search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Cari Berita..."
+            />
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-body nav">
+          <ul>
+            <li><a href="#">Ekonomi</a></li>
+            <li><a href="#">Teknologi</a></li>
+            <li><a href="#">Otomotif</a></li>
+            <li><a href="#">Olahraga</a></li>
+            <li><a href="#">Politik</a></li>
+            <li><a href="#">Gaya Hidup</a></li>
+            <li><a href="#">Edukasi</a></li>
+            <li><a href="#">Hiburan</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#">Teknologi</a>
+      <a href="#">Ekonomi</a>
+      <a href="#">Otomotif</a>
+      <a href="#">Olahraga</a>
+      <a href="#">Politik</a>
+      <a href="#">Gaya Hidup</a>
+      <a href="#">Edukasi</a>
+      <a href="#">Hiburan</a>
+    </nav>
+
+    <div class="container">
+      <main>
+        <div class="berita-content">
+            <h2 id="judul"></h2>
+            <p id="penulis" class="penulis"></p>
+            <p id="publish_date" class="waktu-publish"></p>
+            <img id="foto" src="" alt="Article Image">
+            <div class="deskripsi-berita">
+                <!-- Deskripsi Berita Panjang -->
+                <!-- Pastikan deskripsi berada dalam elemen yang sesuai -->
+                <p id="deskripsi"></p>
+            </div>
+        </div>
+      </main>
+
+      <aside>
+        <h2>Aside</h2>
+        <p>Content of aside.</p>
+        <h2>Aside</h2>
+        <p>Content of aside.</p>
+      </aside>
+
+    </div>
+
+    <footer>
+      <p>Footer</p>
+      <p>asiap</p>
+      <p>anjay</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

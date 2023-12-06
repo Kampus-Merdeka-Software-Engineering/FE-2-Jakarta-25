@@ -260,7 +260,8 @@ main {
 }
 
 main h2 {
-    border-left: 4px solid #007bff; /* Warna garis biru, sesuaikan dengan kebutuhan Anda */
+    border-left: 4px solid #007bff;
+    /* Warna garis biru, sesuaikan dengan kebutuhan Anda */
     padding-left: 10px;
 }
 
@@ -444,30 +445,73 @@ footer {
     display: block;
 }
 
+.berita-content {
+    margin: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.berita-content h2 {
+    color: #333;
+}
+
+.waktu-publish {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.penulis {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #0f6df0;
+}
+
+.deskripsi-berita {
+    margin-top: 15px;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: justify;
+}
+
+.berita-content img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
 @media (max-width: 400px) {
     .card-container {
-      grid-template-columns: 1fr; /* Mengubah menjadi satu kolom */
+        grid-template-columns: 1fr;
+        /* Mengubah menjadi satu kolom */
     }
 
     .article-card {
-        flex-direction: column; /* Mengubah tata letak menjadi kolom */
-      }
-    
-      .article-image,
-      .article-content {
-        flex: initial; /* Mengembalikan flex ke nilai awal untuk elemen dalam kolom */
-      }
-    
-      .article-image img {
-        height: auto; /* Menyesuaikan tinggi gambar agar tidak memotong */
-      }
-    
-      /* Gaya tambahan untuk menyesuaikan dengan tata letak section Terbaru */
-      .article-card .article-image,
-      .article-card .article-content {
-        width: 100%; /* Memastikan elemen penuh lebar */
-      }
-  }
+        flex-direction: column;
+        /* Mengubah tata letak menjadi kolom */
+    }
+
+    .article-image,
+    .article-content {
+        flex: initial;
+        /* Mengembalikan flex ke nilai awal untuk elemen dalam kolom */
+    }
+
+    .article-image img {
+        height: auto;
+        /* Menyesuaikan tinggi gambar agar tidak memotong */
+    }
+
+    /* Gaya tambahan untuk menyesuaikan dengan tata letak section Terbaru */
+    .article-card .article-image,
+    .article-card .article-content {
+        width: 100%;
+        /* Memastikan elemen penuh lebar */
+    }
+}
 
 
 
@@ -507,14 +551,14 @@ footer {
     font-size: 0.9rem;
     font-weight: 100;
     margin-bottom: 28px;
-    color: #ccc;
+    color: black;
 }
 
 .login-container form .outer {
     font-size: 0.8rem;
     font-weight: 100;
     margin-bottom: 28px;
-    color: #ccc;
+    color: black;
 }
 
 .login-container form p a {

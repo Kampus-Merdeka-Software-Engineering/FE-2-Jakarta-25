@@ -10,24 +10,59 @@
 
 <body>
     <div class="login-container">
-        <form>
+        <form id="registrationForm" onsubmit="return registerUser()">
             <h3>Selamat Datang</h3>
             <p>Isi informasi akun Anda dan nikmati layanan kami.</p>
 
             <label for="nama">Nama</label>
-            <input type="text" placeholder="Nama" id="nama">
+            <input type="text" placeholder="Nama" id="nama" required>
 
             <label for="email">Email</label>
-            <input type="text" placeholder="Email" id="email">
+            <input type="email" placeholder="Email" id="email" required>
 
             <label for="password">Password</label>
-            <input type="password" placeholder="Password" id="password">
+            <input type="password" placeholder="Password" id="password" required>
 
-            <button>Sign Up</button>
+            <button type="submit">Sign Up</button>
 
             <p class="outer">Sudah terdaftar? <a href="login.html">Sign In</a></p>
         </form>
     </div>
 </body>
+<script>
+    function registerUser() {
+      // Mendapatkan data dari formulir
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Membuat objek payload untuk dikirim ke API
+      const userData = {
+        nama: nama,
+        email: email,
+        password: password
+      };
+
+      // Melakukan permintaan POST ke API menggunakan fetch
+      fetch('http://localhost:3000/users/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle respons dari API
+        console.log('Response from server:', data);
+        alert('User registered successfully!');
+      })
+      .catch(error => {
+        // Handle error jika permintaan gagal
+        console.error('Error during registration:', error);
+        alert('Error during registration. Please try again.');
+      });
+    }
+  </script>
 
 </html>

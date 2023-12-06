@@ -31,24 +31,78 @@ const baseUrl = "http://localhost:3000";
 const apiRoutes = {
   berita: `${baseUrl}/berita`,
 };
-const loadBerita = () => {
-  fetch(apiRoutes.berita)
-    .then((res) => res.json())
-    .then((res) => {
-      res.data.forEach(({judul, foto, kategori}) => {
-        document.getElementById("berita-terbaru").innerHTML += `
-          <div class="card">
-              <img src="${foto}" alt="Card 1">
-              <div class="card-body">
-                <h3>${judul}</h3>
-                <p>${kategori}</p>
+var beritaTerbaruElement = document.getElementById("berita-terbaru");
+if (beritaTerbaruElement) {
+  const loadBerita = () => {
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        var beritaTerbaruElement = document.getElementById("berita-terbaru");
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          document.getElementById("berita-terbaru").innerHTML += `
+            <div class="card" onclick="redirectToDetail(${id})">
+                <img src="${foto}" alt="Card 1">
+                <div class="card-body">
+                  <h3>${judul}</h3>
+                  <p>${kategori}</p>
+                </div>
               </div>
-            </div>
-        `
+          `;
+        });
+
+        console.log({ res });
       });
+  };
 
-      console.log({ res });
-    });
+  loadBerita();
+}
+
+function redirectToDetail(id) {
+  window.location.href = `/detail?id=${id}`;
+}
+
+const loadBeritaDetail = async () => {
+  const query = window.location.search;
+  const urlSearchParams = new URLSearchParams(query);
+
+  if (urlSearchParams.get("id") != null) {
+    const id = urlSearchParams.get("id");
+
+    const rawResponse = await fetch(`http://localhost:3000/berita/${id}`);
+    const response = await rawResponse.json();
+
+    // Mendapatkan elemen dengan id "publish_date"
+    const publishDateElement = document.getElementById("publish_date");
+
+    // Mendapatkan timestam dari response.data.publish_date
+    const timestamp = response.data.publish_date;
+
+    // Membuat objek Date dari timestam
+    const date = new Date(timestamp);
+
+    // Mengonversi waktu ke waktu lokal Indonesia
+    const options = {
+      timeZone: "Asia/Jakarta",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: false, // Format 24 jam
+    };
+
+    // Menghasilkan string waktu yang diformat
+    const formattedDate = date.toLocaleString("id-ID", options);
+
+    document.getElementById("judul").innerText = response.data.judul;
+    document.getElementById("penulis").innerText = response.data.penulis;
+    // Menetapkan teks elemen dengan waktu yang diformat
+    publishDateElement.innerText = formattedDate;
+    document.getElementById("foto").setAttribute('src', response.data.foto)
+    document.getElementById("deskripsi").innerText = response.data.deskripsi;
+
+    console.log({ response });
+  }
 };
-
-loadBerita();
+loadBeritaDetail();
