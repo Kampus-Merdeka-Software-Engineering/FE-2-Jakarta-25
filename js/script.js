@@ -65,7 +65,7 @@ const loadBeritaDetail = async () => {
   const query = window.location.search;
   const urlSearchParams = new URLSearchParams(query);
 
-  // if (urlSearchParams.get("id") != null) {
+  if (urlSearchParams.get("id") != null) {
     const id = urlSearchParams.get("id");
 
     const rawResponse = await fetch(`https://be-2-jakarta-25-production.up.railway.app/berita/${id}`);
@@ -103,6 +103,6 @@ const loadBeritaDetail = async () => {
     document.getElementById("deskripsi").innerText = response.data.deskripsi;
 
     console.log({ response });
-  // }
+  }
 };
 loadBeritaDetail();
