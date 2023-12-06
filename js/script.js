@@ -58,7 +58,7 @@ if (beritaTerbaruElement) {
 }
 
 function redirectToDetail(id) {
-  window.location.href = `/detail?id=${id}`;
+  window.location.href = `/FE-2-Jakarta-25/detail?id=${id}`;
 }
 
 const loadBeritaDetail = async () => {
