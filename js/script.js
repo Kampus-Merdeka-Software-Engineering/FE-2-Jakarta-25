@@ -29,7 +29,7 @@ document.addEventListener("click", function (event) {
 
 const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
 const apiRoutes = {
-  berita: `${baseUrl}/berita`,
+  berita: `${baseUrl}/berita/terbaru`,
 };
 var beritaTerbaruElement = document.getElementById("berita-terbaru");
 if (beritaTerbaruElement) {
