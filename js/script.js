@@ -27,19 +27,18 @@ document.addEventListener("click", function (event) {
   }
 });
 
-const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
-const apiRoutes = {
-  berita: `${baseUrl}/berita/terbaru`,
-};
 var beritaTerbaruElement = document.getElementById("berita-terbaru");
 if (beritaTerbaruElement) {
-  const loadBerita = () => {
+  const loadBeritaTerbaru = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/terbaru`,
+    };
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        var beritaTerbaruElement = document.getElementById("berita-terbaru");
         res.data.forEach(({ id, judul, foto, kategori }) => {
-          document.getElementById("berita-terbaru").innerHTML += `
+          beritaTerbaruElement.innerHTML += `
             <div class="card" onclick="redirectToDetail(${id})">
                 <img src="${foto}" alt="Card 1">
                 <div class="card-body">
@@ -54,7 +53,247 @@ if (beritaTerbaruElement) {
       });
   };
 
-  loadBerita();
+  loadBeritaTerbaru();
+}
+
+var beritaTeknologiHome = document.getElementById("teknologi");
+if (beritaTeknologiHome) {
+  const loadBeritaTeknologiHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/tekno`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaTeknologiHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaTeknologiHome();
+}
+
+var beritaEkonomiHome = document.getElementById("ekonomi");
+if (beritaEkonomiHome) {
+  const loadBeritaEkonomiHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/ekonom`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaEkonomiHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaEkonomiHome();
+}
+
+var beritaOtomotifHome = document.getElementById("otomotif");
+if (beritaOtomotifHome) {
+  const loadBeritaOtomotifHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/oto`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaOtomotifHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaOtomotifHome();
+}
+
+var beritaOlahragaHome = document.getElementById("olahraga");
+if (beritaOlahragaHome) {
+  const loadBeritaOlahragaHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/olah`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaOlahragaHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaOlahragaHome();
+}
+
+var beritaPolitikHome = document.getElementById("politik");
+if (beritaPolitikHome) {
+  const loadBeritaPolitikHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/pol`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaPolitikHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaPolitikHome();
+}
+
+var beritaGayahidupHome = document.getElementById("gaya-hidup");
+if (beritaGayahidupHome) {
+  const loadBeritaGayahidupHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/gaya`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaGayahidupHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaGayahidupHome();
+}
+
+var beritaEdukasiHome = document.getElementById("edukasi");
+if (beritaEdukasiHome) {
+  const loadBeritaEdukasiHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/edu`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaEdukasiHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaEdukasiHome();
+}
+
+var beritaHiburanHome = document.getElementById("hiburan");
+if (beritaHiburanHome) {
+  const loadBeritaHiburanHome = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/hibur`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaHiburanHome.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaHiburanHome();
 }
 
 function redirectToDetail(id) {
@@ -68,7 +307,9 @@ const loadBeritaDetail = async () => {
   if (urlSearchParams.get("id") != null) {
     const id = urlSearchParams.get("id");
 
-    const rawResponse = await fetch(`https://be-2-jakarta-25-production.up.railway.app/berita/${id}`);
+    const rawResponse = await fetch(
+      `https://be-2-jakarta-25-production.up.railway.app/berita/${id}`
+    );
     const response = await rawResponse.json();
 
     // Mendapatkan elemen dengan id "publish_date"
@@ -99,7 +340,7 @@ const loadBeritaDetail = async () => {
     document.getElementById("penulis").innerText = response.data.penulis;
     // Menetapkan teks elemen dengan waktu yang diformat
     publishDateElement.innerText = formattedDate;
-    document.getElementById("foto").setAttribute('src', response.data.foto)
+    document.getElementById("foto").setAttribute("src", response.data.foto);
     document.getElementById("deskripsi").innerText = response.data.deskripsi;
 
     console.log({ response });
