@@ -364,6 +364,7 @@ if (beritaTeknologiPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
+        document.getElementById("nav-teknologi").setAttribute("class", "active-nav");
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaTeknologiPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -433,6 +434,38 @@ const loadBeritaDetail = async () => {
     document.getElementById("foto").setAttribute("src", response.data.foto);
     document.getElementById("deskripsi").innerText = response.data.deskripsi;
     document.title = response.data.judul;
+
+    if (response.data.kategori == "Teknologi"){
+      document.getElementById("nav-teknologi").setAttribute("class", "active-nav");
+    }
+
+    if (response.data.kategori == "Ekonomi"){
+      document.getElementById("nav-ekonomi").setAttribute("class", "active-nav");
+    }
+
+    if (response.data.kategori == "Otomotif"){
+      document.getElementById("nav-otomotif").setAttribute("class", "active-nav");
+    }
+
+    if (response.data.kategori == "Politik"){
+      document.getElementById("nav-politik").setAttribute("class", "active-nav");
+    }
+
+    if (response.data.kategori == "Edukasi"){
+      document.getElementById("nav-edukasi").setAttribute("class", "active-nav");
+    }
+
+    if (response.data.kategori == "Olahraga"){
+      document.getElementById("nav-olahraga").setAttribute("class", "active-nav");
+    }
+
+    if (response.data.kategori == "Gaya Hidup"){
+      document.getElementById("nav-gayahidup").setAttribute("class", "active-nav");
+    }
+
+    if (response.data.kategori == "Hiburan"){
+      document.getElementById("nav-hiburan").setAttribute("class", "active-nav");
+    }
 
     console.log({ response });
   }
