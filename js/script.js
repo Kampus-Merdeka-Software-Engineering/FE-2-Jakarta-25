@@ -371,6 +371,7 @@ const loadBeritaDetail = async () => {
     publishDateElement.innerText = formattedDate;
     document.getElementById("foto").setAttribute("src", response.data.foto);
     document.getElementById("deskripsi").innerText = response.data.deskripsi;
+    document.title = response.data.judul;
 
     console.log({ response });
   }
