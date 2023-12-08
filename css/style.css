@@ -54,10 +54,18 @@ main section h2 {
 }
 
 .card {
+    position: relative;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Menyesuaikan faktor scaling sesuai keinginan Anda */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menyesuaikan efek bayangan sesuai keinginan Anda */
+    cursor: pointer; /* Mengubah pointer ketika dihover menjadi tanda bahwa itu dapat diklik */
 }
 
 .card img {
@@ -71,12 +79,20 @@ main section h2 {
 }
 
 .article-card {
+    position: relative;
     display: flex;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+    transform: scale(1.05); /* Menyesuaikan faktor scaling sesuai keinginan Anda */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menyesuaikan efek bayangan sesuai keinginan Anda */
+    cursor: pointer; /* Mengubah pointer ketika dihover menjadi tanda bahwa itu dapat diklik */
 }
 
 .article-image {
@@ -496,11 +512,19 @@ footer {
 }
 
 .aside-card {
-  flex: 1 1 calc(33.333% - 20px);
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px);
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aside-card:hover {
+    transform: scale(1.05); /* Menyesuaikan faktor scaling sesuai keinginan Anda */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menyesuaikan efek bayangan sesuai keinginan Anda */
+    cursor: pointer; /* Mengubah pointer ketika dihover menjadi tanda bahwa itu dapat diklik */
 }
 
 .aside-card img {
