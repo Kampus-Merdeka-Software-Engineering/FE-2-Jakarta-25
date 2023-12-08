@@ -325,6 +325,36 @@ if (beritaTerlamaElement) {
   loadBeritaTerlama();
 }
 
+var beritaTeknologiPage = document.getElementById("berita-teknologi");
+if (beritaTeknologiPage) {
+  const loadBeritaTeknologiPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/teknologi`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaTeknologiPage.innerHTML += `
+            <article class="article-card" onclick="redirectToDetail(${id})">
+              <div class="article-image">
+                <img src="${foto}" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <h3>${judul}</h3>
+                <p>${kategori}</p>
+              </div>
+            </article>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaTeknologiPage();
+}
+
 function redirectToDetail(id) {
   window.location.href = `/FE-2-Jakarta-25/detail?id=${id}`;
 }
