@@ -435,7 +435,7 @@ const loadBeritaDetail = async () => {
     document.getElementById("deskripsi").innerText = response.data.deskripsi;
     document.title = response.data.judul;
 
-    if (response.data.kategori == "Teknologi"){
+    if (response.data.kategori = "Teknologi"){
       document.getElementById("nav-teknologi").setAttribute("class", "active-nav");
     }
 
