@@ -461,6 +461,10 @@ footer {
     display: block;
 }
 
+.header-image:hover{
+    cursor: pointer;
+}
+
 .berita-content {
     margin: 20px;
     margin-bottom: 20px;
