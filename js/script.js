@@ -382,6 +382,10 @@ if (beritaTeknologiPage) {
   loadBeritaTeknologiPage();
 }
 
+function redirectToHome() {
+  window.location.href = `/FE-2-Jakarta-25/`;
+}
+
 function redirectToDetail(id) {
   window.location.href = `/FE-2-Jakarta-25/detail?id=${id}`;
 }
