@@ -325,6 +325,35 @@ if (beritaTerlamaElement) {
   loadBeritaTerlama();
 }
 
+var beritaTerlamaPageElement = document.getElementById("berita-terlama-page");
+if (beritaTerlamaPageElement) {
+  const loadBeritaTerlamaPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/terlama/page`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaTerlamaPageElement.innerHTML += `
+              <div class="aside-card" onclick="redirectToDetail(${id})">
+                <img src="${foto}" alt="Berita Lama 3">
+                <div class="aside-card-body">
+                    <h3>${judul}</h3>
+                    <p>${kategori}</p>
+                </div>
+              </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+
+  loadBeritaTerlamaPage();
+}
+
 var beritaTeknologiPage = document.getElementById("berita-teknologi");
 if (beritaTeknologiPage) {
   const loadBeritaTeknologiPage = () => {
@@ -337,15 +366,13 @@ if (beritaTeknologiPage) {
       .then((res) => {
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaTeknologiPage.innerHTML += `
-            <article class="article-card" onclick="redirectToDetail(${id})">
-              <div class="article-image">
-                <img src="${foto}" alt="Article Image">
-              </div>
-              <div class="article-content">
-                <h3>${judul}</h3>
-                <p>${kategori}</p>
-              </div>
-            </article>
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
           `;
         });
 
