@@ -254,7 +254,7 @@ nav a:hover::before {
 }
 
 main {
-    flex: 2;
+    flex: 3;
     margin-right: 0px;
     margin-left: 0px;
 }
@@ -483,34 +483,34 @@ footer {
     border-bottom: 1px solid #ddd;
 }
 
-@media (max-width: 400px) {
-    .card-container {
-        grid-template-columns: 1fr;
-        /* Mengubah menjadi satu kolom */
-    }
+.berita-terlama h2 {
+    margin-bottom: 20px;
+    border-left: 4px solid #007bff;
+    /* Warna garis biru, sesuaikan dengan kebutuhan Anda */
+    padding-left: 20px;
+  }
+  .aside-card-container {
+    display: flex;
+    gap: 20px;
+    padding: 0px 20px;
+}
 
-    .article-card {
-        flex-direction: column;
-        /* Mengubah tata letak menjadi kolom */
-    }
+.aside-card {
+  flex: 1 1 calc(33.333% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .article-image,
-    .article-content {
-        flex: initial;
-        /* Mengembalikan flex ke nilai awal untuk elemen dalam kolom */
-    }
+.aside-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
 
-    .article-image img {
-        height: auto;
-        /* Menyesuaikan tinggi gambar agar tidak memotong */
-    }
-
-    /* Gaya tambahan untuk menyesuaikan dengan tata letak section Terbaru */
-    .article-card .article-image,
-    .article-card .article-content {
-        width: 100%;
-        /* Memastikan elemen penuh lebar */
-    }
+.aside-card-body {
+    padding: 15px;
 }
 
 
@@ -605,11 +605,6 @@ footer {
     border-color: #3498db;
 }
 
-@media (max-width: 400px) {
-    .login-container {
-        width: 90%;
-    }
-}
 
 
 
@@ -618,6 +613,10 @@ footer {
 @media screen and (min-width: 769px) {
     .search-container {
         display: none;
+    }
+
+    .aside-card-container {
+        flex-direction: column;
     }
 }
 
@@ -633,6 +632,16 @@ footer {
     .container {
         flex-direction: column;
         padding: 10px 50px;
+    }
+    
+
+    .aside-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 
     main,
@@ -690,6 +699,16 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        /* Mengubah menjadi satu kolom */
+    }
+
+    .aside-card-container {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+      }
+
     .modal-body ul li {
         flex: 1 1 100%;
     }
@@ -735,5 +754,34 @@ footer {
 
     .modal-header .search-button:hover {
         background-color: #297fb8;
+    }
+}
+
+@media (max-width: 400px) {
+    .article-card {
+        flex-direction: column;
+        /* Mengubah tata letak menjadi kolom */
+    }
+
+    .article-image,
+    .article-content {
+        flex: initial;
+        /* Mengembalikan flex ke nilai awal untuk elemen dalam kolom */
+    }
+
+    .article-image img {
+        height: auto;
+        /* Menyesuaikan tinggi gambar agar tidak memotong */
+    }
+
+    /* Gaya tambahan untuk menyesuaikan dengan tata letak section Terbaru */
+    .article-card .article-image,
+    .article-card .article-content {
+        width: 100%;
+        /* Memastikan elemen penuh lebar */
+    }
+
+    .login-container {
+        width: 90%;
     }
 }
