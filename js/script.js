@@ -56,35 +56,6 @@ if (beritaTerbaruElement) {
   loadBeritaTerbaru();
 }
 
-var beritaTerlamaElement = document.getElementById("berita-terlama");
-if (beritaTerlamaElement) {
-  const loadBeritaTerlama = () => {
-    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
-    const apiRoutes = {
-      berita: `${baseUrl}/berita/terlama`,
-    };
-    fetch(apiRoutes.berita)
-      .then((res) => res.json())
-      .then((res) => {
-        res.data.forEach(({ id, judul, foto, kategori }) => {
-          beritaTerlamaElement.innerHTML += `
-              <div class="aside-card" onclick="redirectToDetail(${id})">
-                <img src="${foto}" alt="Berita Lama 3">
-                <div class="aside-card-body">
-                    <h3>${judul}</h3>
-                    <p>${kategori}</p>
-                </div>
-              </div>
-          `;
-        });
-
-        console.log({ res });
-      });
-  };
-
-  loadBeritaTerlama();
-}
-
 var beritaTeknologiHome = document.getElementById("teknologi");
 if (beritaTeknologiHome) {
   const loadBeritaTeknologiHome = () => {
@@ -112,7 +83,7 @@ if (beritaTeknologiHome) {
         console.log({ res });
       });
   };
-  // loadBeritaTeknologiHome();
+  loadBeritaTeknologiHome();
 }
 
 var beritaEkonomiHome = document.getElementById("ekonomi");
@@ -142,7 +113,7 @@ if (beritaEkonomiHome) {
         console.log({ res });
       });
   };
-  // loadBeritaEkonomiHome();
+  loadBeritaEkonomiHome();
 }
 
 var beritaOtomotifHome = document.getElementById("otomotif");
@@ -172,7 +143,7 @@ if (beritaOtomotifHome) {
         console.log({ res });
       });
   };
-  // loadBeritaOtomotifHome();
+  loadBeritaOtomotifHome();
 }
 
 var beritaOlahragaHome = document.getElementById("olahraga");
@@ -202,7 +173,7 @@ if (beritaOlahragaHome) {
         console.log({ res });
       });
   };
-  // loadBeritaOlahragaHome();
+  loadBeritaOlahragaHome();
 }
 
 var beritaPolitikHome = document.getElementById("politik");
@@ -232,7 +203,7 @@ if (beritaPolitikHome) {
         console.log({ res });
       });
   };
-  // loadBeritaPolitikHome();
+  loadBeritaPolitikHome();
 }
 
 var beritaGayahidupHome = document.getElementById("gaya-hidup");
@@ -292,7 +263,7 @@ if (beritaEdukasiHome) {
         console.log({ res });
       });
   };
-  // loadBeritaEdukasiHome();
+  loadBeritaEdukasiHome();
 }
 
 var beritaHiburanHome = document.getElementById("hiburan");
@@ -322,7 +293,36 @@ if (beritaHiburanHome) {
         console.log({ res });
       });
   };
-  // loadBeritaHiburanHome();
+  loadBeritaHiburanHome();
+}
+
+var beritaTerlamaElement = document.getElementById("berita-terlama");
+if (beritaTerlamaElement) {
+  const loadBeritaTerlama = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/terlama`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaTerlamaElement.innerHTML += `
+              <div class="aside-card" onclick="redirectToDetail(${id})">
+                <img src="${foto}" alt="Berita Lama 3">
+                <div class="aside-card-body">
+                    <h3>${judul}</h3>
+                    <p>${kategori}</p>
+                </div>
+              </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+
+  loadBeritaTerlama();
 }
 
 function redirectToDetail(id) {
