@@ -416,6 +416,192 @@ if (beritaEkonomiPage) {
   loadBeritaEkonomiPage();
 }
 
+var beritaOtomotifPage = document.getElementById("berita-otomotif");
+if (beritaOtomotifPage) {
+  const loadBeritaOtomotifPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/otomotif`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("nav-otomotif").setAttribute("class", "active-nav");
+        document.getElementById("modal-otomotif").style.color = "#3498db";
+        
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaOtomotifPage.innerHTML += `
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaOtomotifPage();
+}
+
+var beritaOlahragaPage = document.getElementById("berita-olahraga");
+if (beritaOlahragaPage) {
+  const loadBeritaOlahragaPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/olahraga`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("nav-olahraga").setAttribute("class", "active-nav");
+        document.getElementById("modal-olahraga").style.color = "#3498db";
+        
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaOlahragaPage.innerHTML += `
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaOlahragaPage();
+}
+
+var beritaPolitikPage = document.getElementById("berita-politik");
+if (beritaPolitikPage) {
+  const loadBeritaPolitikPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/politik`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("nav-politik").setAttribute("class", "active-nav");
+        document.getElementById("modal-politik").style.color = "#3498db";
+        
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaPolitikPage.innerHTML += `
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaPolitikPage();
+}
+
+var beritaGayahidupPage = document.getElementById("berita-gayahidup");
+if (beritaGayahidupPage) {
+  const loadBeritaGayahidupPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/gayahidup`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("nav-gayahidup").setAttribute("class", "active-nav");
+        document.getElementById("modal-gayahidup").style.color = "#3498db";
+        
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaGayahidupPage.innerHTML += `
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaGayahidupPage();
+}
+
+var beritaEdukasiPage = document.getElementById("berita-edukasi");
+if (beritaEdukasiPage) {
+  const loadBeritaEdukasiPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/edukasi`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("nav-edukasi").setAttribute("class", "active-nav");
+        document.getElementById("modal-edukasi").style.color = "#3498db";
+        
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaEdukasiPage.innerHTML += `
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaEdukasiPage();
+}
+
+var beritaHiburanPage = document.getElementById("berita-hiburan");
+if (beritaHiburanPage) {
+  const loadBeritaHiburanPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/hiburan`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("nav-hiburan").setAttribute("class", "active-nav");
+        document.getElementById("modal-hiburan").style.color = "#3498db";
+        
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaHiburanPage.innerHTML += `
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaHiburanPage();
+}
+
 function redirectToHome() {
   window.location.href = `/FE-2-Jakarta-25/`;
 }
