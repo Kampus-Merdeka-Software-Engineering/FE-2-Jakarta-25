@@ -365,6 +365,8 @@ if (beritaTeknologiPage) {
       .then((res) => res.json())
       .then((res) => {
         document.getElementById("nav-teknologi").setAttribute("class", "active-nav");
+        document.getElementById("modal-teknologi").style.color = "#3498db";
+        
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaTeknologiPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -437,34 +439,42 @@ const loadBeritaDetail = async () => {
 
     if (response.data.kategori == "Teknologi"){
       document.getElementById("nav-teknologi").setAttribute("class", "active-nav");
+      document.getElementById("modal-teknologi").style.color = "#3498db";
     }
 
     if (response.data.kategori == "Ekonomi"){
       document.getElementById("nav-ekonomi").setAttribute("class", "active-nav");
+      document.getElementById("modal-ekonomi").style.color = "#3498db";
     }
 
     if (response.data.kategori == "Otomotif"){
       document.getElementById("nav-otomotif").setAttribute("class", "active-nav");
+      document.getElementById("modal-otomotif").style.color = "#3498db";
     }
 
     if (response.data.kategori == "Politik"){
       document.getElementById("nav-politik").setAttribute("class", "active-nav");
+      document.getElementById("modal-politik").style.color = "#3498db";
     }
 
     if (response.data.kategori == "Edukasi"){
       document.getElementById("nav-edukasi").setAttribute("class", "active-nav");
+      document.getElementById("modal-edukasi").style.color = "#3498db";
     }
 
     if (response.data.kategori == "Olahraga"){
       document.getElementById("nav-olahraga").setAttribute("class", "active-nav");
+      document.getElementById("modal-olahraga").style.color = "#3498db";
     }
 
     if (response.data.kategori == "Gaya Hidup"){
       document.getElementById("nav-gayahidup").setAttribute("class", "active-nav");
+      document.getElementById("modal-gayahidup").style.color = "#3498db";
     }
 
     if (response.data.kategori == "Hiburan"){
       document.getElementById("nav-hiburan").setAttribute("class", "active-nav");
+      document.getElementById("modal-hiburan").style.color = "#3498db";
     }
 
     console.log({ response });
