@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star News | Teknologi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="index">
+    <header>
+      <div class="header-hamburger">
+        <button class="hamburger"></button>
+      </div>
+      <div class="header-brand">
+        <img src="assets\logo.png" alt="Logo" class="header-image" onclick="redirectToHome()"/>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cari Berita..."
+          />
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header-icon">
+        <div class="search">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cari Berita..."
+          />
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="profile" id="profileBtn"></button>
+          <div class="dropdown-content" id="profileDropdown">
+            <a href="register.html">
+              <i class="fas fa-user-plus"></i> Daftar
+            </a>
+            <hr />
+            <a href="login.html"> <i class="fas fa-sign-in-alt"></i> Masuk </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Berita</h2>
+          <div class="modal-search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Cari Berita..."
+            />
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-body nav">
+          <ul>
+            <li><a id="modal-ekonomi" href="ekonomi">Ekonomi</a></li>
+            <li><a id="modal-teknologi" href="teknologi">Teknologi</a></li>
+            <li><a id="modal-otomotif" href="otomotif">Otomotif</a></li>
+            <li><a id="modal-olahraga" href="olahraga">Olahraga</a></li>
+            <li><a id="modal-politik" href="politik">Politik</a></li>
+            <li><a id="modal-gayahidup" href="gayahidup">Gaya Hidup</a></li>
+            <li><a id="modal-edukasi" href="edukasi">Edukasi</a></li>
+            <li><a id="modal-hiburan" href="hiburan">Hiburan</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+        <a id="nav-teknologi" href="teknologi">Teknologi</a>
+        <a id="nav-ekonomi" href="ekonomi">Ekonomi</a>
+        <a id="nav-otomotif" href="otomotif">Otomotif</a>
+        <a id="nav-olahraga" href="olahraga">Olahraga</a>
+        <a id="nav-politik" href="politik">Politik</a>
+        <a id="nav-gayahidup" href="gayahidup">Gaya Hidup</a>
+        <a id="nav-edukasi" href="edukasi">Edukasi</a>
+        <a id="nav-hiburan" href="hiburan">Hiburan</a>
+      </nav>
+
+    <div class="container">
+      <main>
+        <section id="terbaru">
+          <h2>Teknologi</h2>
+          <div id="berita-ekonomi" class="card-container">
+            <!-- Card 1 -->
+            <!-- <div class="card">
+              <img src="https://source.unsplash.com/featured/?business" alt="Card 2">
+              <div class="card-body">
+                <h3>Card Title 2</h3>
+                <p>Content of Card 2.</p>
+              </div>
+            </div> -->
+            </div>
+        </section>
+    
+        <!-- Tambahkan section untuk kategori-kategori berita lainnya -->
+    
+      </main>
+
+      <aside class="berita-terlama">
+        <h2>Kilas</h2>
+        <div id="berita-terlama-page" class="aside-card-container">
+
+          <!-- <div class="aside-card">
+              <img src="https://source.unsplash.com/featured/?oldnews" alt="Berita Lama 3">
+              <div class="aside-card-body">
+                  <h3>Berita Lama 3</h3>
+                  <p>Isi berita lama 3.</p>
+              </div>
+          </div> -->
+
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>Tentang Kami</p>
+      <p>Copyright © 2023 Star News</p>
+      <p>Kontak</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

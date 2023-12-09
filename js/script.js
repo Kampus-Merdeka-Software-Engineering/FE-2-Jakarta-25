@@ -385,6 +385,37 @@ if (beritaTeknologiPage) {
   loadBeritaTeknologiPage();
 }
 
+var beritaEkonomiPage = document.getElementById("berita-ekonomi");
+if (beritaEkonomiPage) {
+  const loadBeritaEkonomiPage = () => {
+    const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+    const apiRoutes = {
+      berita: `${baseUrl}/berita/ekonomi`,
+    };
+    fetch(apiRoutes.berita)
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("nav-ekonomi").setAttribute("class", "active-nav");
+        document.getElementById("modal-ekonomi").style.color = "#3498db";
+        
+        res.data.forEach(({ id, judul, foto, kategori }) => {
+          beritaEkonomiPage.innerHTML += `
+          <div class="card" onclick="redirectToDetail(${id})">
+            <img src="${foto}" alt="Card 1">
+            <div class="card-body">
+              <h3>${judul}</h3>
+              <p>${kategori}</p>
+            </div>
+          </div>
+          `;
+        });
+
+        console.log({ res });
+      });
+  };
+  loadBeritaEkonomiPage();
+}
+
 function redirectToHome() {
   window.location.href = `/FE-2-Jakarta-25/`;
 }
