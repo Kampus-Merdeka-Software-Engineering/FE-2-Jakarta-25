@@ -767,12 +767,25 @@ const handleEnterKey = (inputElement) => {
   });
 };
 
+// Fungsi untuk menangani event pada button
+const handleButtonClick = (buttonElement, inputElement) => {
+  buttonElement.addEventListener('click', () => {
+    redirectToSearch(inputElement);
+  });
+};
+
 // Menggunakan fungsi handleEnterKey untuk berbagai input
 const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
 handleEnterKey(searchInput);
+handleButtonClick(searchButton, searchInput);
 
 const cariInput = document.getElementById('cariInput');
+const cariButton = document.getElementById('cariButton');
 handleEnterKey(cariInput);
+handleButtonClick(cariButton, cariInput);
 
 const modalInput = document.getElementById('modalInput');
+const modalButton = document.getElementById('modalButton');
 handleEnterKey(modalInput);
+handleButtonClick(modalButton, modalInput);
