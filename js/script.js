@@ -700,9 +700,8 @@ const loadBeritaDetail = async () => {
 loadBeritaDetail();
 
 
-function redirectToSearch() {
-  const searchInput = document.getElementById('searchInput');
-  const keywordValue = searchInput.value.trim();
+function redirectToSearch(inputElement) {
+  const keywordValue = inputElement.value.trim();
 
   window.location.href = `/FE-2-Jakarta-25/cari?judul=${keywordValue}`;
 }
@@ -756,15 +755,24 @@ const searchBerita = async () => {
     console.error(error);
   }
 };
-
 searchBerita();
 
+// Fungsi untuk menangani event ketika tombol Enter ditekan pada input
+const handleEnterKey = (inputElement) => {
+  inputElement.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      redirectToSearch(inputElement);
+    }
+  });
+};
+
+// Menggunakan fungsi handleEnterKey untuk berbagai input
 const searchInput = document.getElementById('searchInput');
+handleEnterKey(searchInput);
 
-searchInput.addEventListener('keyup', (event) => {
-  event.preventDefault(); // Menghentikan aksi default
+const cariInput = document.getElementById('cariInput');
+handleEnterKey(cariInput);
 
-  if (event.key === 'Enter') {
-    redirectToSearch();
-  }
-});
+const modalInput = document.getElementById('modalInput');
+handleEnterKey(modalInput);
