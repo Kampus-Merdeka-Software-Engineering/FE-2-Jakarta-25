@@ -729,26 +729,26 @@ const searchBerita = async () => {
     // Mengubah nilai elemen h2
     hasilCariElement.innerHTML = `Hasil Pencarian: "${judul}"`;
 
-    if(!result.data) {
-      beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
-    }
+    // if(!result.data) {
+    //   beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
+    // }
 
-    if(result.data.length = '0') {
-      beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
-    }
-
-    result.data.forEach(({ id, judul, foto, kategori }) => {
-      beritaCariPage.innerHTML += `
-      <div class="card" onclick="redirectToDetail(${id})">
+    if (result.data.length != '0') {
+      result.data.forEach(({ id, judul, foto, kategori }) => {
+        beritaCariPage.innerHTML += `
+        <div class="card" onclick="redirectToDetail(${id})">
         <img src="${foto}" alt="Card 1">
         <div class="card-body">
-          <h3>${judul}</h3>
-          <p>${kategori}</p>
+        <h3>${judul}</h3>
+        <p>${kategori}</p>
         </div>
-      </div>
-      `;
-    });
-
+        </div>
+        `;
+      });
+    } else {
+      beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
+    }
+    
     // Manipulasi DOM atau tampilkan hasil pencarian sesuai kebutuhan Anda
     console.log(result);
   } catch (error) {
