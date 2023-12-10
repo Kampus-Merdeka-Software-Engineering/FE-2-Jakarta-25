@@ -698,3 +698,73 @@ const loadBeritaDetail = async () => {
   }
 };
 loadBeritaDetail();
+
+
+function redirectToSearch() {
+  const searchInput = document.getElementById('searchInput');
+  const keywordValue = searchInput.value.trim();
+
+  window.location.href = `/FE-2-Jakarta-25/cari?judul=${keywordValue}`;
+}
+
+const searchBerita = async () => {
+
+
+  try {
+    const query = window.location.search;
+    const urlSearchParams = new URLSearchParams(query);
+
+    const judul = urlSearchParams.get("judul");
+
+    const response = await fetch(`https://be-2-jakarta-25-production.up.railway.app/berita/cari/${judul}`);
+
+    // Lakukan pemanggilan API pencarian
+
+    const result = await response.json();
+    var beritaCariPage = document.getElementById("berita-cari");
+
+    // Mendapatkan elemen dengan ID "hasil-cari"
+    var hasilCariElement = document.getElementById("hasil-cari");
+
+    // Mengubah nilai elemen h2
+    hasilCariElement.innerHTML = `Hasil Pencarian: "${judul}"`;
+
+    if(!result.data) {
+      beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
+    }
+
+    if(result.data.length = '0') {
+      beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
+    }
+
+    result.data.forEach(({ id, judul, foto, kategori }) => {
+      beritaCariPage.innerHTML += `
+      <div class="card" onclick="redirectToDetail(${id})">
+        <img src="${foto}" alt="Card 1">
+        <div class="card-body">
+          <h3>${judul}</h3>
+          <p>${kategori}</p>
+        </div>
+      </div>
+      `;
+    });
+
+    // Manipulasi DOM atau tampilkan hasil pencarian sesuai kebutuhan Anda
+    console.log(result);
+  } catch (error) {
+    // Tangani error jika ada
+    console.error(error);
+  }
+};
+
+searchBerita();
+
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('keyup', (event) => {
+  event.preventDefault(); // Menghentikan aksi default
+
+  if (event.key === 'Enter') {
+    redirectToSearch();
+  }
+});

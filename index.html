@@ -22,25 +22,26 @@
       </div>
       <div class="header-brand">
           <img src="assets\logo.png" alt="Logo" class="header-image" onclick="redirectToHome()"/>
-        <div class="search-container">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Cari Berita..."
-          />
-          <div class="search-icon">
-            <i class="fas fa-search"></i>
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Cari Berita..."
+            />
+            <div class="search-icon">
+              <i class="fas fa-search"></i>
+            </div>
           </div>
-        </div>
       </div>
       <div class="header-icon">
         <div class="search">
           <input
+            id="searchInput"
             type="text"
             class="search-input"
             placeholder="Cari Berita..."
           />
-          <div class="search-icon">
+          <div class="search-icon" onclick="redirectToSearch()">
             <i class="fas fa-search"></i>
           </div>
         </div>

@@ -455,8 +455,13 @@ footer {
 .search-icon {
     background-color: #3498db;
     color: #fff;
-    padding: 10px;
+    padding: 14px;
     border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.kosong {
+    font-size: 18px;
 }
 
 .header-image {
