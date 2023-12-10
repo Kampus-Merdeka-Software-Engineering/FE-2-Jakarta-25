@@ -879,6 +879,8 @@ if (testimoniForm) {
         // Reset formulir setelah pengiriman berhasil
         testimoniForm.reset();
         alert("Testimoni berhasil dikirim!");
+
+        location.reload();
       })
       .catch((error) => {
         // Tangani kesalahan koneksi atau kesalahan lainnya
