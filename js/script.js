@@ -820,13 +820,13 @@ handleEnterKey(modalInput);
 handleButtonClick(modalButton, modalInput);
 
 const saranForm = document.getElementById("saranForm");
-if(saranForm){
+if (saranForm) {
   saranForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Mencegah pengiriman formulir secara default
-  
+
     // Mengumpulkan data formulir
     const formData = new FormData(saranForm);
-  
+
     // Kirim data ke API
     fetch("https://be-2-jakarta-25-production.up.railway.app/saran/create", {
       method: "POST",
@@ -839,6 +839,13 @@ if(saranForm){
       .then((data) => {
         // Handle respon dari API
         console.log(data);
+
+        // Tampilkan pemberitahuan dengan menggunakan alert
+        alert("Saran berhasil diterima!");
+
+        // Kosongkan nilai input dan textarea
+        saranForm.reset();
+
         // Tambahkan logika atau respons lainnya sesuai kebutuhan
       })
       .catch((error) => {
@@ -847,3 +854,4 @@ if(saranForm){
       });
   });
 }
+
