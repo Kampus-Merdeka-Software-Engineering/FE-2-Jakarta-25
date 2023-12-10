@@ -553,7 +553,7 @@ footer {
 
 .saran-form {
     margin-top: 10px;
-    
+    margin-bottom: 40px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -591,6 +591,32 @@ footer {
 .saran-form button:hover {
     background-color: #297fb8;
 }
+
+.testimoni{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.saran-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .saran-form select option {
+    font-size: 14px;
+  }
+
+  .saran-form select:focus {
+    outline: none;
+    border-color: #3498db; 
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.7); 
+  }
 
 
 

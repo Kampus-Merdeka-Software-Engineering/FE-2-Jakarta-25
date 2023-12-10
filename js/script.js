@@ -738,12 +738,11 @@ function redirectToSearch(inputElement) {
 }
 
 const searchBerita = async () => {
-    const query = window.location.search;
-    const urlSearchParams = new URLSearchParams(query);
+  const query = window.location.search;
+  const urlSearchParams = new URLSearchParams(query);
 
-    
-    if (urlSearchParams.get("judul") != null) {
-      const judul = urlSearchParams.get("judul");
+  if (urlSearchParams.get("judul") != null) {
+    const judul = urlSearchParams.get("judul");
 
     const response = await fetch(
       `https://be-2-jakarta-25-production.up.railway.app/berita/cari/${judul}`
@@ -855,3 +854,81 @@ if (saranForm) {
   });
 }
 
+const testimoniForm = document.getElementById("testimoniForm");
+if (testimoniForm) {
+  testimoniForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah pengiriman formulir secara default
+
+    // Mengumpulkan data formulir
+    const formData = new FormData(testimoniForm);
+
+    // Kirim data ke API
+    fetch("https://be-2-jakarta-25-production.up.railway.app/testimoni/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle respon dari API
+        console.log(data);
+        // Tambahkan logika atau respons lainnya sesuai kebutuhan
+
+        // Reset formulir setelah pengiriman berhasil
+        testimoniForm.reset();
+        alert("Testimoni berhasil dikirim!");
+      })
+      .catch((error) => {
+        // Tangani kesalahan koneksi atau kesalahan lainnya
+        console.error("Error:", error);
+      });
+  });
+}
+
+var testimoniPage = document.getElementById("testimonialsContainer");
+
+if (testimoniPage) {
+  const baseUrl = "https://be-2-jakarta-25-production.up.railway.app";
+  const apiRoutes = {
+    testimoni: `${baseUrl}/testimoni/publik`,
+  };
+
+  const fetchAndDisplayTestimonials = async () => {
+    try {
+      const response = await fetch(apiRoutes.testimoni);
+      const testimonialsData = await response.json();
+      const testimonials = testimonialsData.data;
+
+      let currentIndex = 0;
+
+      const displayTestimonial = () => {
+        const testimonial = testimonials[currentIndex];
+        if (testimonial) {
+          testimoniPage.innerHTML = `
+            <div class="card">
+              <div class="card-body">
+                <h3>${testimonial.testimoni}</h3>
+                <p>${testimonial.nama}</p>
+              </div>
+            </div>
+          `;
+          currentIndex = (currentIndex + 1) % testimonials.length;
+        }
+      };
+
+      // Tampilkan testimonial pertama kali
+      displayTestimonial();
+
+      // Gunakan setInterval untuk menampilkan testimonial setiap 3 detik
+      setInterval(displayTestimonial, 3000);
+    } catch (error) {
+      console.error("Error fetching and displaying testimonials:", error);
+    }
+  };
+
+  
+  // Panggil fungsi untuk menampilkan testimonial saat halaman dimuat
+  window.addEventListener("DOMContentLoaded", fetchAndDisplayTestimonials);
+}

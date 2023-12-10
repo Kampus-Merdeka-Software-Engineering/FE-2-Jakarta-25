@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star News | Saran</title>
+    <title>Star News | Testimoni</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -21,18 +21,23 @@
         <button class="hamburger"></button>
       </div>
       <div class="header-brand">
-          <img src="assets\logo.png" alt="Logo" class="header-image" onclick="redirectToHome()"/>
-          <div class="search-container">
-            <input
-              id="cariInput"
-              type="text"
-              class="search-input"
-              placeholder="Cari Berita..."
-            />
-            <div id="cariButton" class="search-icon">
-              <i class="fas fa-search"></i>
-            </div>
+        <img
+          src="assets\logo.png"
+          alt="Logo"
+          class="header-image"
+          onclick="redirectToHome()"
+        />
+        <div class="search-container">
+          <input
+            id="cariInput"
+            type="text"
+            class="search-input"
+            placeholder="Cari Berita..."
+          />
+          <div id="cariButton" class="search-icon">
+            <i class="fas fa-search"></i>
           </div>
+        </div>
       </div>
       <div class="header-icon">
         <div class="search">
@@ -47,15 +52,15 @@
           </div>
         </div>
         <div class="dropdown">
-            <button class="profile" id="profileBtn"></button>
-            <div class="dropdown-content" id="profileDropdown">
-              <a href="testimoni">
-                <i class="fa-solid fa-star"></i> Testimoni
-              </a>
-              <hr />
-              <a href="saran"> <i class="fa-solid fa-hand-holding-heart"></i> Saran </a>
-            </div>
+          <button class="profile" id="profileBtn"></button>
+          <div class="dropdown-content" id="profileDropdown">
+            <a href="testimoni"> <i class="fa-solid fa-star"></i> Testimoni </a>
+            <hr />
+            <a href="saran">
+              <i class="fa-solid fa-hand-holding-heart"></i> Saran
+            </a>
           </div>
+        </div>
       </div>
     </header>
 
@@ -103,42 +108,84 @@
     </nav>
 
     <div class="container">
-        <main>
-            <section>
-                <h2>Formulir Saran</h2>
-                <form id="saranForm" class="saran-form">
-                    <p>Kami Hormati Privasi Setiap Saran yang Anda Bagikan.</p>
-                    <label for="namaInput">Nama:</label>
-                    <input type="text" id="namaInput" name="nama" class="saran-input" placeholder="Maman Resing" autofocus required>
+      <main>
+        <section>
+          <h2>Formulir Testimoni</h2>
+          <form id="testimoniForm" class="saran-form">
+            <p>
+              Kami menghargai setiap testimoni yang Anda bagikan dan menjaga
+              privasi dengan sepenuh hati.
+            </p>
+            <label for="namaInput">Nama:</label>
+            <input
+              type="text"
+              id="namaInput"
+              name="nama"
+              class="saran-input"
+              placeholder="Maman Resing"
+              autofocus
+              required
+            />
 
-                    <label for="emailInput">Email:</label>
-                    <input type="email" id="emailInput" name="email" class="saran-input" placeholder="maman@gmail.com" required>
-        
-                    <label for="saranInput">Saran:</label>
-                    <textarea id="saranInput" name="saran" rows="5" class="saran-input" placeholder="Saya sarankan kamu harus lebih keren" required></textarea>
-        
-                    <button type="submit">Kirim Saran</button>
-                </form>
-            </section>
-        
-            <!-- Konten lainnya sesuai dengan desain Anda -->
-        </main>
-        
+            <label for="emailInput">Email:</label>
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              class="saran-input"
+              placeholder="maman@gmail.com"
+              required
+            />
 
-        <aside class="berita-terlama">
-            <h2>Kilas</h2>
-            <div id="berita-terlama-page" class="aside-card-container">
-    
-              <!-- <div class="aside-card">
+            <label for="telpInput">No Telp:</label>
+            <input
+              type="number"
+              id="telpInput"
+              name="telp"
+              class="saran-input"
+              placeholder="082298438623"
+              required
+            />
+
+            <label for="testimoniInput">Testimoni:</label>
+            <textarea
+              id="testimoniInput"
+              name="testimoni"
+              rows="5"
+              class="saran-input"
+              placeholder="beritanya sangat keren aku bacanya sampe nangis"
+              required
+            ></textarea>
+
+            <label for="statusInput">Status:</label>
+            <select name="status" id="statusInput" class="saran-input" required>
+              <option disabled value="">Pilih Status</option>
+              <option value="publik">Publik</option>
+              <option value="tidak">Tidak</option>
+            </select>
+
+            <button type="submit">Kirim Testimoni</button>
+          </form>
+
+          <h2>Testimoni</h2>
+          <div id="testimonialsContainer" class="testimoni"></div>
+        </section>
+
+        <!-- Konten lainnya sesuai dengan desain Anda -->
+      </main>
+
+      <aside class="berita-terlama">
+        <h2>Kilas</h2>
+        <div id="berita-terlama-page" class="aside-card-container">
+          <!-- <div class="aside-card">
                   <img src="https://source.unsplash.com/featured/?oldnews" alt="Berita Lama 3">
                   <div class="aside-card-body">
                       <h3>Berita Lama 3</h3>
                       <p>Isi berita lama 3.</p>
                   </div>
               </div> -->
-    
-            </div>
-          </aside>
+        </div>
+      </aside>
     </div>
 
     <footer>
@@ -148,6 +195,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-
   </body>
 </html>
