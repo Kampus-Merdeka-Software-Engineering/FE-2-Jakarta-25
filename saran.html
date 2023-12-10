@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Star News | Home</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -21,18 +21,18 @@
         <button class="hamburger"></button>
       </div>
       <div class="header-brand">
-        <img src="assets\logo.png" alt="Logo" class="header-image" onclick="redirectToHome()"/>
-        <div class="search-container">
-          <input
-            id="cariInput"
-            type="text"
-            class="search-input"
-            placeholder="Cari Berita..."
-          />
-          <div id="cariButton" class="search-icon">
-            <i class="fas fa-search"></i>
+          <img src="assets\logo.png" alt="Logo" class="header-image" onclick="redirectToHome()"/>
+          <div class="search-container">
+            <input
+              id="cariInput"
+              type="text"
+              class="search-input"
+              placeholder="Cari Berita..."
+            />
+            <div id="cariButton" class="search-icon">
+              <i class="fas fa-search"></i>
+            </div>
           </div>
-        </div>
       </div>
       <div class="header-icon">
         <div class="search">
@@ -47,15 +47,15 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="profile" id="profileBtn"></button>
-          <div class="dropdown-content" id="profileDropdown">
-            <a href="testimoni">
-              <i class="fa-solid fa-star"></i> Testimoni
-            </a>
-            <hr />
-            <a href="saran"> <i class="fa-solid fa-hand-holding-heart"></i> Saran </a>
+            <button class="profile" id="profileBtn"></button>
+            <div class="dropdown-content" id="profileDropdown">
+              <a href="testimoni">
+                <i class="fa-solid fa-star"></i> Testimoni
+              </a>
+              <hr />
+              <a href="saran"> <i class="fa-solid fa-hand-holding-heart"></i> Saran </a>
+            </div>
           </div>
-        </div>
       </div>
     </header>
 
@@ -103,35 +103,42 @@
     </nav>
 
     <div class="container">
-      <main>
-        <div class="berita-content">
-            <h2 id="judul"></h2>
-            <p id="penulis" class="penulis"></p>
-            <p id="publish_date" class="waktu-publish"></p>
-            <img id="foto" src="" alt="Article Image">
-            <div class="deskripsi-berita">
-                <!-- Deskripsi Berita Panjang -->
-                <!-- Pastikan deskripsi berada dalam elemen yang sesuai -->
-                <p id="deskripsi"></p>
+        <main>
+            <section>
+                <h2>Formulir Saran</h2>
+                <form id="saranForm" class="saran-form">
+                    <p>Kami Hormati Privasi Setiap Saran yang Anda Bagikan.</p>
+                    <label for="namaInput">Nama:</label>
+                    <input type="text" id="namaInput" name="nama" class="saran-input" autofocus required>
+
+                    <label for="emailInput">Email:</label>
+                    <input type="email" id="emailInput" name="email" class="saran-input" required>
+        
+                    <label for="saranInput">Saran:</label>
+                    <textarea id="saranInput" name="saran" rows="5" class="saran-input" required></textarea>
+        
+                    <button type="submit">Kirim Saran</button>
+                </form>
+            </section>
+        
+            <!-- Konten lainnya sesuai dengan desain Anda -->
+        </main>
+        
+
+        <aside class="berita-terlama">
+            <h2>Kilas</h2>
+            <div id="berita-terlama-page" class="aside-card-container">
+    
+              <!-- <div class="aside-card">
+                  <img src="https://source.unsplash.com/featured/?oldnews" alt="Berita Lama 3">
+                  <div class="aside-card-body">
+                      <h3>Berita Lama 3</h3>
+                      <p>Isi berita lama 3.</p>
+                  </div>
+              </div> -->
+    
             </div>
-        </div>
-      </main>
-
-      <aside class="berita-terlama">
-        <h2>Kilas</h2>
-        <div id="berita-terlama-page" class="aside-card-container">
-
-          <!-- <div class="aside-card">
-              <img src="https://source.unsplash.com/featured/?oldnews" alt="Berita Lama 3">
-              <div class="aside-card-body">
-                  <h3>Berita Lama 3</h3>
-                  <p>Isi berita lama 3.</p>
-              </div>
-          </div> -->
-
-        </div>
-      </aside>
-
+          </aside>
     </div>
 
     <footer>
@@ -141,5 +148,10 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <!-- Skrip untuk mengirim formulir ke API -->
+<script>
+    
+</script>
+
   </body>
 </html>

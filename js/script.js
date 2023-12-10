@@ -364,9 +364,11 @@ if (beritaTeknologiPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-teknologi").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-teknologi")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-teknologi").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaTeknologiPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -395,9 +397,11 @@ if (beritaEkonomiPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-ekonomi").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-ekonomi")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-ekonomi").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaEkonomiPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -426,9 +430,11 @@ if (beritaOtomotifPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-otomotif").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-otomotif")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-otomotif").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaOtomotifPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -457,9 +463,11 @@ if (beritaOlahragaPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-olahraga").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-olahraga")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-olahraga").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaOlahragaPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -488,9 +496,11 @@ if (beritaPolitikPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-politik").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-politik")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-politik").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaPolitikPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -519,9 +529,11 @@ if (beritaGayahidupPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-gayahidup").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-gayahidup")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-gayahidup").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaGayahidupPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -550,9 +562,11 @@ if (beritaEdukasiPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-edukasi").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-edukasi")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-edukasi").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaEdukasiPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -581,9 +595,11 @@ if (beritaHiburanPage) {
     fetch(apiRoutes.berita)
       .then((res) => res.json())
       .then((res) => {
-        document.getElementById("nav-hiburan").setAttribute("class", "active-nav");
+        document
+          .getElementById("nav-hiburan")
+          .setAttribute("class", "active-nav");
         document.getElementById("modal-hiburan").style.color = "#3498db";
-        
+
         res.data.forEach(({ id, judul, foto, kategori }) => {
           beritaHiburanPage.innerHTML += `
           <div class="card" onclick="redirectToDetail(${id})">
@@ -654,43 +670,59 @@ const loadBeritaDetail = async () => {
     document.getElementById("deskripsi").innerText = response.data.deskripsi;
     document.title = response.data.judul;
 
-    if (response.data.kategori == "Teknologi"){
-      document.getElementById("nav-teknologi").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Teknologi") {
+      document
+        .getElementById("nav-teknologi")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-teknologi").style.color = "#3498db";
     }
 
-    if (response.data.kategori == "Ekonomi"){
-      document.getElementById("nav-ekonomi").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Ekonomi") {
+      document
+        .getElementById("nav-ekonomi")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-ekonomi").style.color = "#3498db";
     }
 
-    if (response.data.kategori == "Otomotif"){
-      document.getElementById("nav-otomotif").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Otomotif") {
+      document
+        .getElementById("nav-otomotif")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-otomotif").style.color = "#3498db";
     }
 
-    if (response.data.kategori == "Politik"){
-      document.getElementById("nav-politik").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Politik") {
+      document
+        .getElementById("nav-politik")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-politik").style.color = "#3498db";
     }
 
-    if (response.data.kategori == "Edukasi"){
-      document.getElementById("nav-edukasi").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Edukasi") {
+      document
+        .getElementById("nav-edukasi")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-edukasi").style.color = "#3498db";
     }
 
-    if (response.data.kategori == "Olahraga"){
-      document.getElementById("nav-olahraga").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Olahraga") {
+      document
+        .getElementById("nav-olahraga")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-olahraga").style.color = "#3498db";
     }
 
-    if (response.data.kategori == "Gaya Hidup"){
-      document.getElementById("nav-gayahidup").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Gaya Hidup") {
+      document
+        .getElementById("nav-gayahidup")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-gayahidup").style.color = "#3498db";
     }
 
-    if (response.data.kategori == "Hiburan"){
-      document.getElementById("nav-hiburan").setAttribute("class", "active-nav");
+    if (response.data.kategori == "Hiburan") {
+      document
+        .getElementById("nav-hiburan")
+        .setAttribute("class", "active-nav");
       document.getElementById("modal-hiburan").style.color = "#3498db";
     }
 
@@ -699,7 +731,6 @@ const loadBeritaDetail = async () => {
 };
 loadBeritaDetail();
 
-
 function redirectToSearch(inputElement) {
   const keywordValue = inputElement.value.trim();
 
@@ -707,15 +738,16 @@ function redirectToSearch(inputElement) {
 }
 
 const searchBerita = async () => {
-
-
-  try {
     const query = window.location.search;
     const urlSearchParams = new URLSearchParams(query);
 
-    const judul = urlSearchParams.get("judul");
+    
+    if (urlSearchParams.get("judul") != null) {
+      const judul = urlSearchParams.get("judul");
 
-    const response = await fetch(`https://be-2-jakarta-25-production.up.railway.app/berita/cari/${judul}`);
+    const response = await fetch(
+      `https://be-2-jakarta-25-production.up.railway.app/berita/cari/${judul}`
+    );
 
     // Lakukan pemanggilan API pencarian
 
@@ -732,7 +764,7 @@ const searchBerita = async () => {
     //   beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
     // }
 
-    if (result.data.length != '0') {
+    if (result.data.length != "0") {
       result.data.forEach(({ id, judul, foto, kategori }) => {
         beritaCariPage.innerHTML += `
         <div class="card" onclick="redirectToDetail(${id})">
@@ -745,22 +777,19 @@ const searchBerita = async () => {
         `;
       });
     } else {
-      beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`
+      beritaCariPage.innerHTML = `<p class"kosong">Hasil tidak ditemukan...</p>`;
     }
-    
+
     // Manipulasi DOM atau tampilkan hasil pencarian sesuai kebutuhan Anda
     console.log(result);
-  } catch (error) {
-    // Tangani error jika ada
-    console.error(error);
   }
 };
 searchBerita();
 
 // Fungsi untuk menangani event ketika tombol Enter ditekan pada input
 const handleEnterKey = (inputElement) => {
-  inputElement.addEventListener('keyup', (event) => {
-    if (event.key === 'Enter') {
+  inputElement.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
       event.preventDefault();
       redirectToSearch(inputElement);
     }
@@ -769,23 +798,52 @@ const handleEnterKey = (inputElement) => {
 
 // Fungsi untuk menangani event pada button
 const handleButtonClick = (buttonElement, inputElement) => {
-  buttonElement.addEventListener('click', () => {
+  buttonElement.addEventListener("click", () => {
     redirectToSearch(inputElement);
   });
 };
 
 // Menggunakan fungsi handleEnterKey untuk berbagai input
-const searchInput = document.getElementById('searchInput');
-const searchButton = document.getElementById('searchButton');
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
 handleEnterKey(searchInput);
 handleButtonClick(searchButton, searchInput);
 
-const cariInput = document.getElementById('cariInput');
-const cariButton = document.getElementById('cariButton');
+const cariInput = document.getElementById("cariInput");
+const cariButton = document.getElementById("cariButton");
 handleEnterKey(cariInput);
 handleButtonClick(cariButton, cariInput);
 
-const modalInput = document.getElementById('modalInput');
-const modalButton = document.getElementById('modalButton');
+const modalInput = document.getElementById("modalInput");
+const modalButton = document.getElementById("modalButton");
 handleEnterKey(modalInput);
 handleButtonClick(modalButton, modalInput);
+
+const saranForm = document.getElementById("saranForm");
+if(saranForm){
+  saranForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah pengiriman formulir secara default
+  
+    // Mengumpulkan data formulir
+    const formData = new FormData(saranForm);
+  
+    // Kirim data ke API
+    fetch("https://be-2-jakarta-25-production.up.railway.app/saran/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle respon dari API
+        console.log(data);
+        // Tambahkan logika atau respons lainnya sesuai kebutuhan
+      })
+      .catch((error) => {
+        // Tangani kesalahan koneksi atau kesalahan lainnya
+        console.error("Error:", error);
+      });
+  });
+}
