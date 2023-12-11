@@ -181,6 +181,10 @@ button.profile::before {
     margin-left: 5px;
 }
 
+button.profile:hover {
+    color: gold;
+}
+
 .dropdown-content.show {
     display: block;
     opacity: 1;
@@ -191,6 +195,10 @@ button.profile::before {
 .dropdown {
     display: inline-block;
     position: relative;
+}
+
+.dropdown-content a:hover {
+    color: gold;
 }
 
 .dropdown-content {
@@ -618,7 +626,89 @@ footer {
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.7); 
   }
 
+  footer p a {
+    text-decoration: none;
+    color: white;
+  }
 
+  footer p a:hover {
+    color: gold;
+  }
+
+  .contact-info {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    flex: 1 1 300px;
+}
+
+.contact-info h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.header-section {
+    background-color: transparent;
+    color: #3498db;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.content-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+}
+
+.content-section img{
+  text-align: center;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.section-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.team-member {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team-member-image {
+    width: auto;
+    max-height: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.team-member-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.team-member-role {
+    font-size: 1em;
+    color: #555;
+}
 
 
 

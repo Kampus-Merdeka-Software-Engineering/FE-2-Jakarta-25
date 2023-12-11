@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star News | Testimoni</title>
+    <title>Star News | Tentang Kami</title>
     <link rel="icon" href="assets\icon.jpg" type="image/x-icon">
     <link
       rel="stylesheet"
@@ -15,7 +15,6 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body class="index">
     <header>
       <div class="header-hamburger">
@@ -110,68 +109,67 @@
 
     <div class="container">
       <main>
-        <section>
-          <h2>Formulir Testimoni</h2>
-          <form id="testimoniForm" class="saran-form">
-            <p>
-              Kami menghargai setiap testimoni yang Anda bagikan dan menjaga
-              privasi dengan sepenuh hati.
-            </p>
-            <label for="namaInput">Nama:</label>
-            <input
-              type="text"
-              id="namaInput"
-              name="nama"
-              class="saran-input"
-              placeholder="Maman Resing"
-              autofocus
-              required
-            />
-
-            <label for="emailInput">Email:</label>
-            <input
-              type="email"
-              id="emailInput"
-              name="email"
-              class="saran-input"
-              placeholder="maman@gmail.com"
-              required
-            />
-
-            <label for="telpInput">No Telp:</label>
-            <input
-              type="number"
-              id="telpInput"
-              name="telp"
-              class="saran-input"
-              placeholder="082298438623"
-              required
-            />
-
-            <label for="testimoniInput">Testimoni:</label>
-            <textarea
-              id="testimoniInput"
-              name="testimoni"
-              rows="5"
-              class="saran-input"
-              placeholder="beritanya sangat keren aku bacanya sampe nangis"
-              required
-            ></textarea>
-
-            <label for="statusInput">Status:</label>
-            <select name="status" id="statusInput" class="saran-input" required>
-              <option disabled value="">Pilih Status</option>
-              <option value="publik">Publik</option>
-              <option value="tidak">Tidak</option>
-            </select>
-
-            <button type="submit">Kirim Testimoni</button>
-          </form>
-
-          <h2>Testimoni</h2>
-          <div id="testimonialsContainer" class="testimoni"></div>
+        <div class="header-section">
+            <h1>Tentang Kami</h1>
+        </div>
+    
+        <section id="company-info" class="content-section">
+            <h2 class="section-title">Star News</h2>
+            <p class="section-text">Star News adalah perusahaan berita yang berdiri pada tahun 2023. Kami berdedikasi untuk memberikan berita terbaru dan akurat di berbagai topik baik nasional maupun internasional.
+            Dengan komitmen untuk selalu memberikan informasi terbaru dan terpercaya, Star News berdiri sebagai sumber informasi yang faktual dan dapat diandalkan.
+                Kami hadir untuk memberikan berita terbaru yang dibutuhkan, sehingga Anda dapat mengambil keputusan yang tepat di dunia yang terus berkembang.
+            Terima kasih telah memilih Star News dimana kepercayaan, akurasi, serta informasi terbaru berjalan beriringan.</p>
+            <img src="assets\logo.png" alt="Perusahaan Kami" class="section-image">
         </section>
+    
+        <section id="team-members" class="content-section">
+            <h2 class="section-title">Anggota Tim</h2>
+    
+            <div class="team-member">
+                <img src="assets\Jonatan Hutahean.png" alt="Project Leader" class="team-member-image">
+                <h3 class="team-member-name">Jonatan Hutahaean</h3>
+                <p class="team-member-role">Project Leader</p>
+            </div>
 
+            <div class="team-member">
+              <img src="assets\Ulfi Akhsan.png" alt="Project Leader" class="team-member-image">
+              <h3 class="team-member-name">M. Ulfi Akhsan Setyanto</h3>
+              <p class="team-member-role">Front End Developer</p>
+          </div>
+
+          <div class="team-member">
+            <img src="assets\Khairun.jpeg" alt="Project Leader" class="team-member-image">
+            <h3 class="team-member-name">Khairunisa Br. Tamba</h3>
+            <p class="team-member-role">Front End Developer</p>
+        </div>
+
+          <div class="team-member">
+            <img src="assets\Nisa Maulina.jpeg" alt="Project Leader" class="team-member-image">
+            <h3 class="team-member-name">Nisa Maulina Mawaddah</h3>
+            <p class="team-member-role">Back End Developer</p>
+        </div>
+
+        <div class="team-member">
+          <img src="assets\Dhea Arinta.jpg" alt="Project Leader" class="team-member-image">
+          <h3 class="team-member-name">Dhea Arinta Ayu Pramesti</h3>
+          <p class="team-member-role">Back End Developer</p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets\puspa.jpg" alt="Project Leader" class="team-member-image">
+        <h3 class="team-member-name">Ni Nyoman Tri Puspa Dewi</h3>
+        <p class="team-member-role">Quality Assurance</p>
+    </div>
+
+    <div class="team-member">
+      <img src="assets\foto almet bg biru.jpg" alt="Project Leader" class="team-member-image">
+      <h3 class="team-member-name">Firda Khairun Nisa</h3>
+      <p class="team-member-role">Quality Assurance</p>
+  </div>
+    
+            <!-- Tambahkan div lain untuk setiap anggota tim dengan class yang sesuai -->
+    
+        </section>
         <!-- Konten lainnya sesuai dengan desain Anda -->
       </main>
 
